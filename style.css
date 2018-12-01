@@ -1,0 +1,62 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-weight: lighter;
+}
+
+h2 {
+    font-weight: lighter;
+}
+
+h3 {
+    font-weight: lighter;
+}
+
+#grid-container {
+    display:grid;
+    grid: 315px / auto auto auto;
+    grid-gap: 3px;
+}
+
+#container {
+    width:1000px;
+    margin:auto;
+}
+
+.gridElement {
+    overflow: hidden;
+    font-weight: lighter;
+    width:325px;
+    height:325px;
+    position: relative;
+    margin: 0px;
+}
+
+.hoverElement {
+    opacity: 0;
+    width:100%;
+    height:100%;
+    background-color:rgba(255, 255, 255, .75);
+    position: absolute;
+    padding:20px;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    transition: opacity .25s;
+    user-select: none;
+}
+
+.hoverElement:hover {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+    #container {
+        width: 350px;
+    }
+    #grid-container {
+        grid: 325px / auto;
+    }
+}
